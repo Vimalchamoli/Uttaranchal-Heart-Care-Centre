@@ -6,7 +6,7 @@ const Navbar = () => {
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-sm md:text-3xl font-bold text-blue-700 whitespace-nowrap">
+          <h1 className="text-lg md:text-3xl font-bold text-blue-700 max-w-[140px] md:max-w-none">
             Uttaranchal Heart-Care Centre
           </h1>
 
