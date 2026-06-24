@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-10">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-2xl font-bold">Uttaranchal Heart Centre</h2>
+        <h2 className="text-2xl font-bold">Uttaranchal Heart-Care Centre</h2>
 
         <div className="mt-6 flex justify-center gap-6">
           <a href="#">Home</a>
