@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-700">
+          <h1 className="text-lg md:text-3xl font-bold text-blue-700 max-w-[140px] md:max-w-none">
             Uttaranchal Heart-Care Centre
           </h1>
+
+          <button
+            className="md:hidden text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
 
           <ul className="hidden md:flex gap-8 font-medium">
             <li>
@@ -47,10 +55,29 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+          <button className="hidden md:block bg-blue-600 text-white text-sm px-3 py-2 rounded-lg hover:bg-blue-700">
             Book Appointment
           </button>
         </div>
+        {menuOpen && (
+          <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden">
+            <a href="#home" className="block px-6 py-3 border-b">
+              Home
+            </a>
+
+            <a href="#services" className="block px-6 py-3 border-b">
+              Services
+            </a>
+
+            <a href="#about" className="block px-6 py-3 border-b">
+              About
+            </a>
+
+            <a href="#contact" className="block px-6 py-3">
+              Contact
+            </a>
+          </div>
+        )}
       </nav>
     </div>
   );

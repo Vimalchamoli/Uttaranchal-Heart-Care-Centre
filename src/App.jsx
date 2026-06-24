@@ -13,6 +13,9 @@ function App() {
   return (
     <>
       <Navbar />
+
+      <div className="h-20"></div>
+
       <Hero />
       <Services />
       <Stats />
