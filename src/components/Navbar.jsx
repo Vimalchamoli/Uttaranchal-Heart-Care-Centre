@@ -6,15 +6,15 @@ const Navbar = () => {
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-lg md:text-3xl font-bold text-blue-700 max-w-[140px] md:max-w-none">
+          <h1 className="text-sm md:text-3xl font-bold text-blue-700 whitespace-nowrap">
             Uttaranchal Heart-Care Centre
           </h1>
 
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl text-blue-700 font-bold transition-all duration-300"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            ☰
+            {menuOpen ? "✕" : "☰"}
           </button>
 
           <ul className="hidden md:flex gap-8 font-medium">
@@ -60,20 +60,32 @@ const Navbar = () => {
           </button>
         </div>
         {menuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg z-50 md:hidden">
-            <a href="#home" className="block px-6 py-3 border-b">
+          <div className="absolute top-full left-0 w-full bg-white shadow-xl rounded-b-2xl border-t border-gray-100 z-50 md:hidden">
+            <a
+              href="#home"
+              className="block px-6 py-4 border-b hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+            >
               Home
             </a>
 
-            <a href="#services" className="block px-6 py-3 border-b">
+            <a
+              href="#services"
+              className="block px-6 py-4 border-b hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+            >
               Services
             </a>
 
-            <a href="#about" className="block px-6 py-3 border-b">
+            <a
+              href="#about"
+              className="block px-6 py-4 border-b hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+            >
               About
             </a>
 
-            <a href="#contact" className="block px-6 py-3">
+            <a
+              href="#contact"
+              className="block px-6 py-4 border-b hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+            >
               Contact
             </a>
           </div>
